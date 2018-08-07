@@ -1,0 +1,78 @@
+.g-moments {
+  padding: 20px 50px 5px 50px;
+
+  .nav {
+    position: absolute;
+    top: -45px;
+    right: 170px;
+    padding: 0;
+    box-shadow: 0 0 3px #DDDDDD;
+    width: 233px;
+    min-height: unset;
+    overflow: hidden;
+    user-select: none;
+  }
+}
+
+.m-header {
+  line-height: 24px;
+}
+
+.m-container {
+  padding: 20px 35px 0 35px;
+}
+
+.g-unit {
+  display: flex;
+  margin-bottom: 5px;
+
+  .left, .right {
+    display: inline-block;
+    width: auto;
+  }
+
+  .left {
+    width: 130px;
+  }
+
+  .right {
+    margin-top: -11px;
+    flex: 1 0 auto;
+  }
+}
+
+.m-unit {
+  display: flex;
+  img {
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px #999999;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+    p {
+      margin-top: 15px;
+    }
+  }
+}
+
+.m-moment {
+  font-size: 15px;
+
+  .time {
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #2db7f5;
+    color: #EEEEEE;
+  }
+}
+
+.m-details {
+  float: right;
+}

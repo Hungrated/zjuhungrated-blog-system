@@ -1,0 +1,52 @@
+.g-empty {
+  padding-top: 100px;
+  text-align: center;
+
+  strong {
+    font-size: 16px;
+    color: #999999;
+  }
+}
+
+.m-unit {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  padding: 0 15px;
+  border-bottom: 1px dashed #EEEEEE;
+  transition: all 250ms;
+  border-radius: 5px;
+
+  &:hover {
+    background: #F9F9F9;
+  }
+
+  .title {
+    width: auto;
+    padding: 0;
+    flex: 1 0 auto;
+    border: none;
+  }
+
+  .desc {
+    width: auto;
+    color: #999999;
+    border-radius: unset;
+    border: none;
+    padding: 5px 15px;
+  }
+
+  .details {
+    width: auto;
+    border: none;
+    color: #999999;
+    display: inline-block;
+    float: right;
+    padding: 0;
+    line-height: 37px;
+  }
+}
+
+.g-labels {
+  margin: 0 20px;
+}

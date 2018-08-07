@@ -1,0 +1,28 @@
+.g-extras {
+  display: flex;
+  padding-bottom: 20px;
+
+  .left, .right {
+    position: relative;
+  }
+
+  .left {
+    display: block;
+    flex: 1 0 auto;
+    margin: 0;
+  }
+
+  .right {
+    width: 400px;
+    margin: 20px 50px 20px -50px;
+    padding: 5px;
+  }
+}
+
+.g-button {
+  margin: 18px auto 0 auto;
+}
+
+.g-button-moments {
+  margin: 0 auto 0 480px;
+}

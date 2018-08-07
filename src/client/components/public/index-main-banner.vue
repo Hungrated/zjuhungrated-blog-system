@@ -1,0 +1,53 @@
+<template>
+  <div class="m-banner">
+    <div class="m-banner container">
+      <Carousel autoplay :autoplay-speed="3500" v-model="value" loop>
+        <div v-for="img in imgList" :key="img.img_id">
+          <CarouselItem>
+            <div class="m-banner container unit">
+              <img :src="img.src">
+            </div>
+          </CarouselItem>
+        </div>
+      </Carousel>
+    </div>
+  </div>
+</template>
+
+<script>
+  import { Carousel, CarouselItem } from 'iview';
+
+  export default {
+    name: 'index-main-banner',
+    components: { Carousel, CarouselItem },
+    data () {
+      return {
+        value: 0,
+        imgList: []
+      };
+    },
+    methods: {
+      refreshBannerImgList () {
+        let _this = this;
+        this.$ajax.get('/api/banner')
+          .then(function (res) {
+            if (res.data.length) {
+              _this.imgList = res.data;
+            } else {
+              _this.imgList = [{img_id: '0', src: require('../../assets/banner.jpg')}];
+            }
+          })
+          .catch(function (e) {
+            console.log(e);
+          });
+      }
+    },
+    mounted () {
+      this.refreshBannerImgList();
+    }
+  };
+</script>
+
+<style scoped lang="scss">
+  @import '../../styles/index-banner';
+</style>

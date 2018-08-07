@@ -1,15 +1,26 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-
-# production
-/dist
-
-# misc
 .DS_Store
+node_modules/
+/dist/
 npm-debug.log*
-/.idea/
-/src/_server/node_modules/
-/src/_server/package-lock.json
+yarn-debug.log*
+yarn-error.log*
+/test/unit/coverage/
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+/src/server/public/apidoc/
+/src/server/public/static/
+/src/server/public/index.html
 /package-lock.json
+/innovation-platform-plus.iml
+/src/server/package-lock.json
+/src/server/public/files/plans/
+/src/server/public/files/sources/
+/src/server/public/files/userinfo/
+/src/server/public/files/final/
+/src/server/public/files/images/

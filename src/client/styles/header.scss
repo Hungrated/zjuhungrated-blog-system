@@ -1,0 +1,59 @@
+@import "base";
+
+.g-header-container {
+  height: 45px;
+  background-color: rgba(14,10,28,0.25);
+}
+
+.g-header {
+  padding: 0 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+  display: flex;
+  user-select: none;
+  position: relative;
+
+  .brand {
+    margin-right: 15px;
+    padding: 0;
+    height: 45px;
+    display: flex;
+    width: 145px;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .nav {
+    height: 100%;
+    flex: 1 0 auto;
+
+    li {
+      font-size: 15px;
+    }
+  }
+}
+
+.ivu-menu-dark {
+  transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  //backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(14,10,28,0.75);
+}
+
+@keyframes navSlide {
+  0% {
+    top: -45px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.g-header-fixed {
+  animation: navSlide ease-out 200ms;
+  position: fixed;
+  width: 100%;
+}

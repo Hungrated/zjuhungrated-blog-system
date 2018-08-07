@@ -1,0 +1,58 @@
+const Sequelize = require('sequelize');
+
+const mysql = require('../middlewares/sequelize');
+// const pathLib = require('path');
+
+const schema = {
+  school_id: {
+    type: Sequelize.INTEGER(11),
+    primaryKey: true,
+    unique: true
+  },
+  avatar: {
+    type: Sequelize.STRING
+  },
+  name: {
+    type: Sequelize.STRING(16),
+    allowNull: false
+  },
+  sex: {
+    type: Sequelize.ENUM,
+    values: ['未知', '男', '女']
+  },
+  academy: {
+    type: Sequelize.STRING(16)
+  },
+  class_id: {
+    type: Sequelize.INTEGER(11)
+  },
+  grade: {
+    type: Sequelize.STRING(16)
+  },
+  cur_class: {
+    type: Sequelize.STRING
+  },
+  prev_classes: {
+    type: Sequelize.TEXT
+  },
+  supervisor: {
+    type: Sequelize.STRING(16)
+  },
+  birth_date: {
+    type: Sequelize.STRING(16)
+  },
+  phone_num: {
+    type: Sequelize.STRING(16)
+  },
+  description: {
+    type: Sequelize.STRING(128)
+  }
+};
+
+const options = {
+  underscored: true
+};
+
+const Profile = mysql.define('profile', schema, options);
+
+module.exports = Profile;

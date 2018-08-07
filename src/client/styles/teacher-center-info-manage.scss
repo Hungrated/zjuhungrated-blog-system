@@ -1,0 +1,108 @@
+.g-info {
+  .options {
+    .body {
+      display: flex;
+      line-height: 36px;
+    }
+
+    .list {
+      display: inline-block;
+      flex: auto;
+    }
+
+    .type, .range, .sid, .label {
+      margin-right: 10px;
+      float: left;
+      padding-bottom: 5px;
+    }
+
+    .type {
+      width: 200px;
+    }
+
+    .range {
+      width: 335px;
+    }
+
+    .sid {
+      width: 200px;
+    }
+
+    .label {
+      width: 200px;
+    }
+
+    .query {
+      float: right;
+    }
+
+    .banner, .label-edit {
+      display: flex;
+      justify-content: space-between;
+      background: #FAFAFA;
+      margin-top: 20px;
+      border-radius: 5px;
+      padding: 10px;
+      line-height: 24px;
+
+      span {
+        color: #999999;
+      }
+    }
+  }
+
+  .header-card {
+    line-height: 24px;
+  }
+}
+
+.g-body {
+  min-height: calc(100vh - 158px);
+}
+
+.m-manage {
+  margin-top: 20px;
+
+  .table {
+    margin: 15px 0;
+  }
+
+  .pages {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+.croppa-container {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #999999;
+}
+
+.m-edit-bnr {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+
+  span {
+    font-size: 14px;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #777777;
+  }
+}
+
+.m-edit-label {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+
+  & > * {
+    margin: 10px;
+    width: auto;
+  }
+}
+

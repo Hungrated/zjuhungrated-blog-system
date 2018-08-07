@@ -1,0 +1,178 @@
+.g-plans {
+  .body {
+    display: flex;
+    min-height: 700px;
+    overflow-x: hidden;
+  }
+
+  .left {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    border-left: 1px solid #EEEEEE;
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+}
+
+.m-unit {
+  height: 48px;
+  line-height: 32px;
+
+  .info {
+    padding: 8px;
+    background: #2b85e4;
+    border-radius: 5px;
+    color: #FFFFFF;
+  }
+
+  .export {
+    padding: 8px;
+  }
+
+  .btn {
+    float: right;
+  }
+}
+
+.m-list-cls {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-unit-cls {
+  margin-left: 1px;
+  box-shadow: 0 0 1px #DDDDDD;
+  padding: 8px 0 0 0;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: all 200ms;
+
+  &:hover {
+    box-shadow: 0 0 1px #2b85e4;
+  }
+}
+
+.m-list-stu {
+  width: calc(100vw - 440px);
+  min-width: 475px;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 1600px) {
+  .m-list-stu {
+    width: 1160px;
+  }
+}
+
+.m-stu {
+  overflow: auto;
+  padding: 15px;
+
+  .subtitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px 20px 15px;
+    border-bottom: 1px solid #EEEEEE;
+
+    p {
+      font-size: 14px;
+      color: #999999;
+    }
+
+    .buttons {
+      & > * {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .tab {
+    padding: 15px;
+  }
+
+  .plans, .meetings, .final {
+    margin: 15px;
+  }
+}
+
+.m-profile {
+  margin: 5px 0;
+  padding: 15px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  .avatar {
+    padding: 0;
+    display: block;
+    flex: 0 0 180px;
+    margin: 0 20px 0 0;
+  }
+
+  .info {
+    display: block;
+    margin: 0;
+    padding: 5px;
+    flex: 1 0 auto;
+    font-size: 15px;
+    border-radius: 5px;
+    background: #F7F7F7;
+  }
+
+  .info-unit {
+    display: block;
+  }
+
+  .info-name {
+    padding: 5px 0 0 20px;
+    font-size: 30px;
+  }
+
+  .info-sub {
+    color: #777777;
+  }
+
+  .info-block {
+    display: flex;
+    padding: 5px 10px;
+  }
+
+  .info-blkunit {
+    flex: 0 1 auto;
+  }
+
+  .info-blkunit-right {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #DDDDDD;
+    border-radius: unset;
+  }
+}
+
+.m-height {
+  height: 180px;
+}
+
+.m-rate {
+  height: 36px;
+  line-height: 36px;
+
+  .title {
+    font-size: 15px;
+  }
+  .mark {
+    margin-bottom: 5px;
+  }
+
+  .info {
+    color: #999999;
+    padding-left: 50px;
+  }
+}

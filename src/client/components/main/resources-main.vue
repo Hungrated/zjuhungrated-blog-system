@@ -1,16 +1,6 @@
 <template>
   <div class="g-resources">
-    <div class="g-resources nav">
-      <Menu mode="horizontal" theme="dark">
-        <div class="m-nav">
-          <MenuItem name="1">
-            <span @click="editFile()">
-              <Icon type="upload"></Icon>&emsp;上传文件
-            </span>
-          </MenuItem>
-        </div>
-      </Menu>
-    </div>
+
     <Card disHover class="g-body">
       <div class="g-resources body">
         <transition name="fade">
@@ -108,6 +98,9 @@
             </span>
           </span>
         </div>
+        <Button type="dashed" size="large" class="nav-upload" @click="editFile()">
+           <span><Icon type="upload"></Icon>&emsp;上传文件</span>
+        </Button>
         <Table stripe :columns="resourceTableColumns" :data="resourceList"></Table>
       </div>
       <div class="g-page">

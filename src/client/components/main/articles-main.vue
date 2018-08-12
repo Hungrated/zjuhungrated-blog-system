@@ -1,16 +1,5 @@
 <template>
   <div class="g-articles">
-    <div class="g-articles nav">
-      <Menu mode="horizontal" theme="dark">
-        <div class="m-nav">
-          <MenuItem name="1">
-            <span @click="changeRoute('/articles/compose')">
-              <Icon type="compose"></Icon>&emsp;发布文章
-            </span>
-          </MenuItem>
-        </div>
-      </Menu>
-    </div>
     <Card disHover>
       <div class="g-labels">
         <span class="m-labels">

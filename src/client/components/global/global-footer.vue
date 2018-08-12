@@ -1,30 +1,5 @@
 <template>
   <footer id="global-footer" class="g-footer">
-    <Row>
-      <i-col span="7">
-        <div class="sites">
-          <strong class="title">服务与支持</strong>
-          <router-link class="sites-col" tag="span" v-for="site in sites.siteList0" :key="site.id" :to="site.route">
-            <Button @click="scrollTop" type="text">{{site.text}}</Button>
-          </router-link>
-        </div>
-      </i-col>
-      <i-col span="7">
-        <div class="sites">
-          <strong class="title">帮 助</strong>
-          <span class="sites-col">
-            <Button @click="toGuide" type="text">使用说明</Button>
-          </span>
-          <span class="sites-col">
-            <Button @click="toAbout" type="text">关于《创新实践》课程交流互动平台</Button>
-          </span>
-          <!--<router-link class="sites-col" tag="span" v-for="site in sites.siteList1" :key="site.id" :to="site.route">-->
-            <!--<Button @click="scrollTop" type="text" size="small">{{site.text}}</Button>-->
-          <!--</router-link>-->
-        </div>
-      </i-col>
-    </Row>
-    <div class="divider"></div>
     <span class="cprt">
       <span>Copyright © 2018 Hungrated, Hangzhou Dianzi University, All rights reserved.</span><br>
       <a target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备 18013714号</a>

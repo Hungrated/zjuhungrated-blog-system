@@ -7,7 +7,7 @@
 
 .g-header {
   padding: 0 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
   display: flex;
   user-select: none;
   position: relative;
@@ -36,10 +36,20 @@
   }
 }
 
+.nav-compose {
+  position: absolute;
+  top: 0;
+  right: 180px;
+  padding: 0;
+  box-shadow: 0 0 3px #DDDDDD;
+  width: 124px;
+  overflow: hidden;
+  user-select: none;
+}
+
 .ivu-menu-dark {
   transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  //backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(14,10,28,0.75);
 }
 
@@ -53,7 +63,7 @@
 }
 
 .g-header-fixed {
-  animation: navSlide ease-out 200ms;
+  animation: navSlide ease-out 350ms;
   position: fixed;
   width: 100%;
 }

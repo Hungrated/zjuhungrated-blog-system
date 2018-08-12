@@ -1,17 +1,15 @@
 .g-resources {
   padding: 20px 50px;
-  min-height: calc(100vh - 158px);
+  min-height: calc(100vh - 265px);
 
-  .nav {
-    position: absolute;
-    top: -45px;
-    right: 170px;
-    padding: 0;
-    box-shadow: 0 0 3px #DDDDDD;
-    width: 124px;
-    min-height: unset;
+  .nav-upload {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
     overflow: hidden;
     user-select: none;
+    color: #2b85e4;
+    background: rgba(178, 235, 255, 0.51);
   }
 
   .header {

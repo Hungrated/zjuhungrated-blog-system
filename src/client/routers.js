@@ -9,14 +9,9 @@ const routers = [
     component: res => require(['./components/main/index-main.vue'], res)
   },
   {
-    path: '/user-center',
-    name: 'user-center',
-    component: res => require(['./components/main/user-center-main.vue'], res)
-  },
-  {
-    path: '/teacher-center',
-    name: 'teacher-center',
-    component: res => require(['./components/main/teacher-center-main.vue'], res)
+    path: '/info-manage',
+    name: 'info-manage',
+    component: res => require(['./components/main/info-manage-main.vue'], res)
   },
   {
     path: '/moments',
@@ -42,11 +37,6 @@ const routers = [
     path: '/resources',
     name: 'resources',
     component: res => require(['./components/main/resources-main.vue'], res)
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: res => require(['./components/main/about-main.vue'], res)
   }
 ];
 

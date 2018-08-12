@@ -1,26 +1,5 @@
 <template>
   <div id="moments" class="g-moments">
-    <div class="g-moments nav" v-if="nav">
-      <Menu mode="horizontal" theme="dark">
-        <div class="m-nav">
-          <MenuItem name="1">
-            <span @click="changeMode('article')">
-              <Icon type="document-text"></Icon>&nbsp;文章
-            </span>
-          </MenuItem>
-          <MenuItem name="2">
-            <span @click="changeMode('resource')">
-              <Icon type="android-folder-open"></Icon>&nbsp;资源
-            </span>
-          </MenuItem>
-          <MenuItem name="3">
-            <span @click="changeMode('planmod')">
-              <Icon type="ios-lightbulb"></Icon>&nbsp;计划
-            </span>
-          </MenuItem>
-        </div>
-      </Menu>
-    </div>
     <Timeline>
       <p v-if="moments.length === 0" style="text-align: center">暂无动态哦</p>
       <div class="m-container" v-else>

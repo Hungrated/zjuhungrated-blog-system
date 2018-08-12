@@ -1,17 +1,5 @@
 .g-moments {
   padding: 20px 50px 5px 50px;
-
-  .nav {
-    position: absolute;
-    top: -45px;
-    right: 170px;
-    padding: 0;
-    box-shadow: 0 0 3px #DDDDDD;
-    width: 233px;
-    min-height: unset;
-    overflow: hidden;
-    user-select: none;
-  }
 }
 
 .m-header {
@@ -65,11 +53,13 @@
   font-size: 15px;
 
   .time {
+    display: inline-block;
     border-radius: 5px;
-    margin-top: 10px;
     padding: 5px 10px;
     background: #2db7f5;
     color: #EEEEEE;
+    min-width: 100px;
+
   }
 }
 

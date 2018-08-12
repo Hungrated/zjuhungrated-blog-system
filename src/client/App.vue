@@ -62,6 +62,6 @@
     background-size: 100% auto;
     min-width: 900px !important;
     position: relative;
-    padding-bottom: 245px;
+    padding-bottom: 65px;
   }
 </style>

@@ -113,6 +113,11 @@
   background: transparent;
   box-shadow: none;
   position: fixed;
-  top: 2px;
-  right: 165px;
+  right: 180px;
+  top: 0;
+  height: 45px !important;
+}
+
+.ivu-back-top-inner > .ivu-icon {
+  margin-top: 2px;
 }

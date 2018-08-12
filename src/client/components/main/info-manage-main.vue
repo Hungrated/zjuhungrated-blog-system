@@ -1,21 +1,21 @@
 <template>
   <div class="g-info">
-    <div class="g-info header">
-      <div class="g-info options">
+    <div class="header">
+      <div class="options">
         <Card disHover>
-          <span slot="title" class="g-info header-card">
+          <span slot="title" class="header-card">
             <strong>筛选条件</strong>
           </span>
-          <div class="g-info options body">
-            <div class="g-info options list">
-              <div class="g-info options type">
+          <div class="body">
+            <div class="list">
+              <div class="type">
                 <Select placeholder="类 别..." size="large" v-model="infoLabel" @on-change="refreshData()">
                   <Option v-for="type in infoTypeList" :value="type.label" :key="type.index">
                     {{ type.value }}
                   </Option>
                 </Select>
               </div>
-              <div class="g-info options range">
+              <div class="range">
                 <DatePicker v-model="infoTimeStart"
                             size="large"
                             format="yyyy-MM-dd"
@@ -31,25 +31,25 @@
                             style="width: 165px">
                 </DatePicker>
               </div>
-              <div class="g-info options sid">
+              <div class="sid">
                 <Input size="large"
                        v-model="infoSid"
                        placeholder="学号或工号（选填）"
                        :disabled="infoLabel === 'banner' || infoLabel === 'class' || infoLabel === 'image'"/>
               </div>
-              <div class="g-info options label">
+              <div class="label">
                 <Input size="large"
                        v-model="infoLid"
                        placeholder="标签ID（选填）"
                        :disabled="infoLabel !== 'blog' && infoLabel !== 'resource'"/>
               </div>
             </div>
-            <div class="g-info options query">
+            <div class="query">
               <Button @click="refreshData()" type="primary" size="large">查 询</Button>
             </div>
           </div>
           <transition name="fade">
-            <div v-if="infoLabel === 'banner'" class="g-info options banner">
+            <div v-if="infoLabel === 'banner'" class="banner">
               <span>
                 &emsp;<Icon type="information-circled"></Icon>&nbsp;
                 轮播图用于首页展示，要上传新的轮播图，请点击右边的"新增"按钮
@@ -76,7 +76,7 @@
                 </div>
               </Modal>
             </div>
-            <div v-if="infoLabel === 'label'" class="g-info options label-edit">
+            <div v-if="infoLabel === 'label'" class="label-edit">
               <span>
                 &emsp;<Icon type="information-circled"></Icon>&nbsp;
                 标签用于文章和资源文件的分类与筛选，要新增标签，请点击右边的"新增"按钮
@@ -126,17 +126,17 @@
       </div>
       <div class="m-manage">
         <Card disHover>
-          <div class="m-manage pages">
+          <div class="pages">
             <Page size="small"
                   show-total
                   :total="dataCount"
                   :page-size="pageLimit"
                   @on-change="changePage"></Page>
           </div>
-          <div class="g-body m-manage table">
+          <div class="table">
             <Table stripe :columns="infoCols" :data="infoData"></Table>
           </div>
-          <div class="m-manage pages">
+          <div class="pages">
             <Page size="small"
                   show-total
                   :total="dataCount"
@@ -1481,5 +1481,5 @@
 </script>
 
 <style lang="scss">
-  @import '../../styles/teacher-center-info-manage';
+  @import '../../styles/info-manage';
 </style>

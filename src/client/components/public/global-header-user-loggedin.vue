@@ -2,7 +2,7 @@
   <div class="m-users">
     <Submenu name="9">
       <template slot="title">
-        <router-link tag="span" to="/teacher-center">
+        <router-link tag="span" to="/info-manage">
           <span @click="scrollTop">
             <Icon type="person"></Icon>
             {{name}}
@@ -10,7 +10,7 @@
         </router-link>
       </template>
       <MenuGroup title="档 案">
-        <MenuItem name="9-0" @click="changeRoute('/teacher-center')">
+        <MenuItem name="9-0" @click="changeRoute('/info-manage')">
           <span>
             <strong><Icon type="person"></Icon>&emsp;{{name}}</strong>
           </span>
@@ -21,7 +21,7 @@
         </MenuItem>
       </MenuGroup>
       <MenuGroup title="管 理">
-        <MenuItem name="9-1"><span @click="changeRoute('/teacher-center')">管理中心</span></MenuItem>
+        <MenuItem name="9-1"><span @click="changeRoute('/info-manage')">管理中心</span></MenuItem>
         <MenuItem name="9-2"><span @click="pwdMod = true">修改密码</span></MenuItem>
       </MenuGroup>
       <MenuGroup title="后 台">

@@ -7,48 +7,50 @@
       <ul class="nav">
         <MenuItem name="1">
           <router-link tag="span" to="/index">
-            <Icon type="home"></Icon>
-            &nbsp;<span @click="scrollTop">主 页</span>
+            <span @click="scrollTop">主 页</span>
           </router-link>
         </MenuItem>
         <MenuItem name="2">
           <router-link tag="span" to="/moments">
-            <Icon type="android-star-outline"></Icon>
-            &nbsp;<span @click="scrollTop">动 态</span>
+            <span @click="scrollTop">动 态</span>
           </router-link>
         </MenuItem>
         <MenuItem name="3">
           <router-link tag="span" to="/articles">
-            <Icon type="document-text"></Icon>
-            &nbsp;<span @click="scrollTop">文 章</span>
+            <span @click="scrollTop">文 章</span>
           </router-link>
         </MenuItem>
         <MenuItem name="4">
           <router-link tag="span" to="/resources">
-            <Icon type="folder"></Icon>
-            &nbsp;<span @click="scrollTop">资源共享</span>
+            <span @click="scrollTop">资源共享</span>
           </router-link>
         </MenuItem>
       </ul>
       <div v-model="userIdentity">
         <global-header-user v-if="userIdentity === 'none'"
                             @updateUserStatus="changeUserStatus()"/>
-        <global-header-user-student :name="name"
-                                    :schoolId="schoolId"
-                                    v-if="userIdentity === 'student'"
-                                    @updateUserStatus="changeUserStatus()"/>
-        <global-header-user-teacher :name="name"
+        <global-header-user-loggedin :name="name"
                                     :schoolId="schoolId"
                                     v-if="userIdentity === 'teacher'"
                                     @updateUserStatus="changeUserStatus()"/>
       </div>
     </Menu>
+    <div class="nav-compose" v-if="userIdentity === 'teacher'">
+      <Menu mode="horizontal" theme="dark">
+        <div class="m-nav">
+          <MenuItem name="1">
+            <span @click="changeRoute('/articles/compose')">
+              <Icon type="compose"></Icon>&emsp;发布文章
+            </span>
+          </MenuItem>
+        </div>
+      </Menu>
+    </div>
   </header>
 </template>
 <script>
   import globalHeaderUser from '../public/global-header-user';
-  import globalHeaderUserStudent from '../public/global-header-user-student';
-  import globalHeaderUserTeacher from '../public/global-header-user-teacher';
+  import globalHeaderUserLoggedin from '../public/global-header-user-loggedin';
   import { Menu, MenuItem, Icon } from 'iview';
 
   export default {
@@ -66,8 +68,7 @@
     },
     components: {
       globalHeaderUser,
-      globalHeaderUserStudent,
-      globalHeaderUserTeacher,
+      globalHeaderUserLoggedin,
       Menu,
       MenuItem,
       Icon
